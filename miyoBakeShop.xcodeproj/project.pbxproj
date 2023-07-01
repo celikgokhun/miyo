@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B59E294E2A501A6500109FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E294D2A501A6500109FAF /* AppDelegate.swift */; };
+		B59E29502A501A6500109FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E294F2A501A6500109FAF /* SceneDelegate.swift */; };
+		B59E29522A501A6500109FAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29512A501A6500109FAF /* ViewController.swift */; };
+		B59E29552A501A6500109FAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59E29532A501A6500109FAF /* Main.storyboard */; };
+		B59E29582A501A6500109FAF /* miyoBakeShop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B59E29562A501A6500109FAF /* miyoBakeShop.xcdatamodeld */; };
+		B59E295A2A501A6600109FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B59E29592A501A6600109FAF /* Assets.xcassets */; };
+		B59E295D2A501A6600109FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B59E295B2A501A6600109FAF /* LaunchScreen.storyboard */; };
+		B59E29682A501A6600109FAF /* miyoBakeShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29672A501A6600109FAF /* miyoBakeShopTests.swift */; };
+		B59E29722A501A6600109FAF /* miyoBakeShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29712A501A6600109FAF /* miyoBakeShopUITests.swift */; };
+		B59E29742A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29732A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B59E29642A501A6600109FAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B59E29422A501A6500109FAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B59E29492A501A6500109FAF;
+			remoteInfo = miyoBakeShop;
+		};
+		B59E296E2A501A6600109FAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B59E29422A501A6500109FAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B59E29492A501A6500109FAF;
+			remoteInfo = miyoBakeShop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B59E294A2A501A6500109FAF /* miyoBakeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miyoBakeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59E294D2A501A6500109FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B59E294F2A501A6500109FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B59E29512A501A6500109FAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B59E29542A501A6500109FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B59E29572A501A6500109FAF /* miyoBakeShop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = miyoBakeShop.xcdatamodel; sourceTree = "<group>"; };
+		B59E29592A501A6600109FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B59E295C2A501A6600109FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B59E295E2A501A6600109FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B59E29632A501A6600109FAF /* miyoBakeShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miyoBakeShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59E29672A501A6600109FAF /* miyoBakeShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miyoBakeShopTests.swift; sourceTree = "<group>"; };
+		B59E296D2A501A6600109FAF /* miyoBakeShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miyoBakeShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59E29712A501A6600109FAF /* miyoBakeShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miyoBakeShopUITests.swift; sourceTree = "<group>"; };
+		B59E29732A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miyoBakeShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B59E29472A501A6500109FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59E29602A501A6600109FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59E296A2A501A6600109FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B59E29412A501A6500109FAF = {
+			isa = PBXGroup;
+			children = (
+				B59E294C2A501A6500109FAF /* miyoBakeShop */,
+				B59E29662A501A6600109FAF /* miyoBakeShopTests */,
+				B59E29702A501A6600109FAF /* miyoBakeShopUITests */,
+				B59E294B2A501A6500109FAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B59E294B2A501A6500109FAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B59E294A2A501A6500109FAF /* miyoBakeShop.app */,
+				B59E29632A501A6600109FAF /* miyoBakeShopTests.xctest */,
+				B59E296D2A501A6600109FAF /* miyoBakeShopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B59E294C2A501A6500109FAF /* miyoBakeShop */ = {
+			isa = PBXGroup;
+			children = (
+				B59E294D2A501A6500109FAF /* AppDelegate.swift */,
+				B59E294F2A501A6500109FAF /* SceneDelegate.swift */,
+				B59E29512A501A6500109FAF /* ViewController.swift */,
+				B59E29532A501A6500109FAF /* Main.storyboard */,
+				B59E29592A501A6600109FAF /* Assets.xcassets */,
+				B59E295B2A501A6600109FAF /* LaunchScreen.storyboard */,
+				B59E295E2A501A6600109FAF /* Info.plist */,
+				B59E29562A501A6500109FAF /* miyoBakeShop.xcdatamodeld */,
+			);
+			path = miyoBakeShop;
+			sourceTree = "<group>";
+		};
+		B59E29662A501A6600109FAF /* miyoBakeShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				B59E29672A501A6600109FAF /* miyoBakeShopTests.swift */,
+			);
+			path = miyoBakeShopTests;
+			sourceTree = "<group>";
+		};
+		B59E29702A501A6600109FAF /* miyoBakeShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B59E29712A501A6600109FAF /* miyoBakeShopUITests.swift */,
+				B59E29732A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift */,
+			);
+			path = miyoBakeShopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B59E29492A501A6500109FAF /* miyoBakeShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59E29772A501A6600109FAF /* Build configuration list for PBXNativeTarget "miyoBakeShop" */;
+			buildPhases = (
+				B59E29462A501A6500109FAF /* Sources */,
+				B59E29472A501A6500109FAF /* Frameworks */,
+				B59E29482A501A6500109FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = miyoBakeShop;
+			productName = miyoBakeShop;
+			productReference = B59E294A2A501A6500109FAF /* miyoBakeShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B59E29622A501A6600109FAF /* miyoBakeShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59E297A2A501A6600109FAF /* Build configuration list for PBXNativeTarget "miyoBakeShopTests" */;
+			buildPhases = (
+				B59E295F2A501A6600109FAF /* Sources */,
+				B59E29602A501A6600109FAF /* Frameworks */,
+				B59E29612A501A6600109FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B59E29652A501A6600109FAF /* PBXTargetDependency */,
+			);
+			name = miyoBakeShopTests;
+			productName = miyoBakeShopTests;
+			productReference = B59E29632A501A6600109FAF /* miyoBakeShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B59E296C2A501A6600109FAF /* miyoBakeShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B59E297D2A501A6600109FAF /* Build configuration list for PBXNativeTarget "miyoBakeShopUITests" */;
+			buildPhases = (
+				B59E29692A501A6600109FAF /* Sources */,
+				B59E296A2A501A6600109FAF /* Frameworks */,
+				B59E296B2A501A6600109FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B59E296F2A501A6600109FAF /* PBXTargetDependency */,
+			);
+			name = miyoBakeShopUITests;
+			productName = miyoBakeShopUITests;
+			productReference = B59E296D2A501A6600109FAF /* miyoBakeShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B59E29422A501A6500109FAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					B59E29492A501A6500109FAF = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					B59E29622A501A6600109FAF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B59E29492A501A6500109FAF;
+					};
+					B59E296C2A501A6600109FAF = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B59E29492A501A6500109FAF;
+					};
+				};
+			};
+			buildConfigurationList = B59E29452A501A6500109FAF /* Build configuration list for PBXProject "miyoBakeShop" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B59E29412A501A6500109FAF;
+			productRefGroup = B59E294B2A501A6500109FAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B59E29492A501A6500109FAF /* miyoBakeShop */,
+				B59E29622A501A6600109FAF /* miyoBakeShopTests */,
+				B59E296C2A501A6600109FAF /* miyoBakeShopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B59E29482A501A6500109FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59E295D2A501A6600109FAF /* LaunchScreen.storyboard in Resources */,
+				B59E295A2A501A6600109FAF /* Assets.xcassets in Resources */,
+				B59E29552A501A6500109FAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59E29612A501A6600109FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59E296B2A501A6600109FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B59E29462A501A6500109FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59E29582A501A6500109FAF /* miyoBakeShop.xcdatamodeld in Sources */,
+				B59E29522A501A6500109FAF /* ViewController.swift in Sources */,
+				B59E294E2A501A6500109FAF /* AppDelegate.swift in Sources */,
+				B59E29502A501A6500109FAF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59E295F2A501A6600109FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59E29682A501A6600109FAF /* miyoBakeShopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59E29692A501A6600109FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59E29722A501A6600109FAF /* miyoBakeShopUITests.swift in Sources */,
+				B59E29742A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B59E29652A501A6600109FAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B59E29492A501A6500109FAF /* miyoBakeShop */;
+			targetProxy = B59E29642A501A6600109FAF /* PBXContainerItemProxy */;
+		};
+		B59E296F2A501A6600109FAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B59E29492A501A6500109FAF /* miyoBakeShop */;
+			targetProxy = B59E296E2A501A6600109FAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B59E29532A501A6500109FAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B59E29542A501A6500109FAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B59E295B2A501A6600109FAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B59E295C2A501A6600109FAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B59E29752A501A6600109FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B59E29762A501A6600109FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B59E29782A501A6600109FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWSDMUL7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = miyoBakeShop/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celik.gokhun.miyoBakeShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B59E29792A501A6600109FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWSDMUL7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = miyoBakeShop/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celik.gokhun.miyoBakeShop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B59E297B2A501A6600109FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWSDMUL7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celik.gokhun.miyoBakeShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miyoBakeShop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/miyoBakeShop";
+			};
+			name = Debug;
+		};
+		B59E297C2A501A6600109FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWSDMUL7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celik.gokhun.miyoBakeShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/miyoBakeShop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/miyoBakeShop";
+			};
+			name = Release;
+		};
+		B59E297E2A501A6600109FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWSDMUL7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celik.gokhun.miyoBakeShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = miyoBakeShop;
+			};
+			name = Debug;
+		};
+		B59E297F2A501A6600109FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WWSDMUL7U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.celik.gokhun.miyoBakeShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = miyoBakeShop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B59E29452A501A6500109FAF /* Build configuration list for PBXProject "miyoBakeShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59E29752A501A6600109FAF /* Debug */,
+				B59E29762A501A6600109FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B59E29772A501A6600109FAF /* Build configuration list for PBXNativeTarget "miyoBakeShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59E29782A501A6600109FAF /* Debug */,
+				B59E29792A501A6600109FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B59E297A2A501A6600109FAF /* Build configuration list for PBXNativeTarget "miyoBakeShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59E297B2A501A6600109FAF /* Debug */,
+				B59E297C2A501A6600109FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B59E297D2A501A6600109FAF /* Build configuration list for PBXNativeTarget "miyoBakeShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B59E297E2A501A6600109FAF /* Debug */,
+				B59E297F2A501A6600109FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B59E29562A501A6500109FAF /* miyoBakeShop.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B59E29572A501A6500109FAF /* miyoBakeShop.xcdatamodel */,
+			);
+			currentVersion = B59E29572A501A6500109FAF /* miyoBakeShop.xcdatamodel */;
+			path = miyoBakeShop.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B59E29422A501A6500109FAF /* Project object */;
+}
