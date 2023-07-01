@@ -17,6 +17,11 @@
 		B59E29682A501A6600109FAF /* miyoBakeShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29672A501A6600109FAF /* miyoBakeShopTests.swift */; };
 		B59E29722A501A6600109FAF /* miyoBakeShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29712A501A6600109FAF /* miyoBakeShopUITests.swift */; };
 		B59E29742A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29732A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift */; };
+		B59E29812A50370000109FAF /* TakeOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29802A50370000109FAF /* TakeOrderViewController.swift */; };
+		B59E29832A5039D900109FAF /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29822A5039D900109FAF /* AddFoodViewController.swift */; };
+		B59E29852A50451400109FAF /* miyo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B59E29842A50451400109FAF /* miyo.jpeg */; };
+		B59E29872A506E6D00109FAF /* AddBeverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29862A506E6D00109FAF /* AddBeverageViewController.swift */; };
+		B59E29892A50769A00109FAF /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29882A50769A00109FAF /* AddTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		B59E296D2A501A6600109FAF /* miyoBakeShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miyoBakeShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59E29712A501A6600109FAF /* miyoBakeShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miyoBakeShopUITests.swift; sourceTree = "<group>"; };
 		B59E29732A501A6600109FAF /* miyoBakeShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miyoBakeShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B59E29802A50370000109FAF /* TakeOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeOrderViewController.swift; sourceTree = "<group>"; };
+		B59E29822A5039D900109FAF /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		B59E29842A50451400109FAF /* miyo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miyo.jpeg; sourceTree = "<group>"; };
+		B59E29862A506E6D00109FAF /* AddBeverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBeverageViewController.swift; sourceTree = "<group>"; };
+		B59E29882A50769A00109FAF /* AddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		B59E294C2A501A6500109FAF /* miyoBakeShop */ = {
 			isa = PBXGroup;
 			children = (
+				B59E29842A50451400109FAF /* miyo.jpeg */,
 				B59E294D2A501A6500109FAF /* AppDelegate.swift */,
 				B59E294F2A501A6500109FAF /* SceneDelegate.swift */,
 				B59E29512A501A6500109FAF /* ViewController.swift */,
@@ -108,6 +119,10 @@
 				B59E29592A501A6600109FAF /* Assets.xcassets */,
 				B59E295B2A501A6600109FAF /* LaunchScreen.storyboard */,
 				B59E295E2A501A6600109FAF /* Info.plist */,
+				B59E29802A50370000109FAF /* TakeOrderViewController.swift */,
+				B59E29822A5039D900109FAF /* AddFoodViewController.swift */,
+				B59E29862A506E6D00109FAF /* AddBeverageViewController.swift */,
+				B59E29882A50769A00109FAF /* AddTableViewController.swift */,
 				B59E29562A501A6500109FAF /* miyoBakeShop.xcdatamodeld */,
 			);
 			path = miyoBakeShop;
@@ -237,6 +252,7 @@
 				B59E295D2A501A6600109FAF /* LaunchScreen.storyboard in Resources */,
 				B59E295A2A501A6600109FAF /* Assets.xcassets in Resources */,
 				B59E29552A501A6500109FAF /* Main.storyboard in Resources */,
+				B59E29852A50451400109FAF /* miyo.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59E29582A501A6500109FAF /* miyoBakeShop.xcdatamodeld in Sources */,
+				B59E29812A50370000109FAF /* TakeOrderViewController.swift in Sources */,
+				B59E29872A506E6D00109FAF /* AddBeverageViewController.swift in Sources */,
 				B59E29522A501A6500109FAF /* ViewController.swift in Sources */,
 				B59E294E2A501A6500109FAF /* AppDelegate.swift in Sources */,
+				B59E29832A5039D900109FAF /* AddFoodViewController.swift in Sources */,
 				B59E29502A501A6500109FAF /* SceneDelegate.swift in Sources */,
+				B59E29892A50769A00109FAF /* AddTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
