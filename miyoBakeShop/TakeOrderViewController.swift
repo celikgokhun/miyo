@@ -78,10 +78,13 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @objc func getFoodList(){
         
-        foodIdArray.removeAll(keepingCapacity: false)
-        foodNameArray.removeAll(keepingCapacity: false)
-        foodPriceArray.removeAll(keepingCapacity: false)
-        foodPhotoArray.removeAll(keepingCapacity: false)
+        if foodIdArray.count > 0{
+            foodIdArray.removeAll(keepingCapacity: false)
+            foodNameArray.removeAll(keepingCapacity: false)
+            foodPriceArray.removeAll(keepingCapacity: false)
+            foodPhotoArray.removeAll(keepingCapacity: false)
+        }
+        
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -121,10 +124,12 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @objc func getBeverageList(){
         
-        beverageIdArray.removeAll(keepingCapacity: false)
-        beverageNameArray.removeAll(keepingCapacity: false)
-        beveragePriceArray.removeAll(keepingCapacity: false)
-        beveragePhotoArray.removeAll(keepingCapacity: false)
+        if beverageIdArray.count > 0{
+            beverageIdArray.removeAll(keepingCapacity: false)
+            beverageNameArray.removeAll(keepingCapacity: false)
+            beveragePriceArray.removeAll(keepingCapacity: false)
+            beveragePhotoArray.removeAll(keepingCapacity: false)
+        }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
@@ -207,22 +212,28 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
  
         if(selectedItem == "foods") {
             
-            cell?.cellInit(
-                name: foodNameArray[indexPath.row],
-                price: foodPriceArray[indexPath.row],
-                amount: 0,
-                photo: foodPhotoArray[indexPath.row]
-            )
+            if foodNameArray.count > 0{
+                cell?.cellInit(
+                    name: foodNameArray[indexPath.row],
+                    price: foodPriceArray[indexPath.row],
+                    amount: 0,
+                    photo: foodPhotoArray[indexPath.row]
+                )
+            }
+            
             
             
         } else {
             
-            cell?.cellInit(
-                name: beverageNameArray[indexPath.row],
-                price: beveragePriceArray[indexPath.row],
-                amount: 0,
-                photo: beveragePhotoArray[indexPath.row]
-            )
+            if beverageNameArray.count > 0 {
+                cell?.cellInit(
+                    name: beverageNameArray[indexPath.row],
+                    price: beveragePriceArray[indexPath.row],
+                    amount: 0,
+                    photo: beveragePhotoArray[indexPath.row]
+                )
+            }
+
             
         }
         
