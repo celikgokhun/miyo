@@ -167,6 +167,9 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
         let selectedSegmentIndex = sender.selectedSegmentIndex
         
+        getFoodList()
+        getBeverageList()
+        
         if(selectedSegmentIndex == 0) {
             selectedItem = "foods"
         } else {
