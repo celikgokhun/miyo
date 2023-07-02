@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class AddBeverageViewController: UIViewController {
+class AddBeverageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var beverageImageView: UIImageView!
     @IBOutlet weak var beverageNameTextField: UITextField!
@@ -21,6 +21,8 @@ class AddBeverageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addBeverageButton.isHidden = true
+        
         let gestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(hideKeyboard)
@@ -28,9 +30,17 @@ class AddBeverageViewController: UIViewController {
         
         view.addGestureRecognizer(gestureRecognizer)
         
+        beverageImageView.isUserInteractionEnabled = true
+        let imageTapRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(selectImage)
+        )
+        beverageImageView.addGestureRecognizer(imageTapRecognizer)
+        
     }
     
     @IBAction func addBeverage(_ sender: Any) {
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -79,6 +89,28 @@ class AddBeverageViewController: UIViewController {
     
     @objc func hideKeyboard(){
         view.endEditing(true)
+    }
+    
+    @objc func selectImage(){
+        
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        present(
+            picker,
+            animated: true,
+            completion: nil
+        )
+    }
+    
+    func imagePickerController(
+        _ picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            beverageImageView.image = info[.originalImage] as? UIImage
+            addBeverageButton.isEnabled = true
+            addBeverageButton.isHidden = false
+            self.dismiss(animated: true, completion: nil)
     }
     
 }
