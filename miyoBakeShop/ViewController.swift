@@ -10,85 +10,86 @@ import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var foodListView: UITableView!
-    var foodNameArray = [String]()
-    var foodIdArray = [UUID]()
+    @IBOutlet weak var tableListView: UITableView!
     
-    var selectedFood = ""
-    var selectedFoodId: UUID?
+    var tableNameArray = [String]()
+    var tableIdArray = [UUID]()
+    
+    var selectedTable = ""
+    var selectedTableId: UUID?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        foodListView.delegate = self
-        foodListView.dataSource = self
+        tableListView.delegate = self
+        tableListView.dataSource = self
+    
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonItem.SystemItem.add,
             target: self,
             action: #selector(addButtonClicked))
         
-        getFoodList()
+        getTableList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(getFoodList),
+            selector: #selector(getTableList),
             name: NSNotification.Name(rawValue: "newData"),
             object: nil
         )
     }
     
     
-    @objc func getFoodList() {
+    @objc func getTableList() {
         
-        foodNameArray.removeAll(keepingCapacity: false)
-        foodIdArray.removeAll(keepingCapacity: false)
+        tableNameArray.removeAll(keepingCapacity: false)
+        tableIdArray.removeAll(keepingCapacity: false)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let fetchFoodRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Food")
-        fetchFoodRequest.returnsObjectsAsFaults = false
+        let fetchTableRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Table")
+        fetchTableRequest.returnsObjectsAsFaults = false
         
         do{
-            let foods = try context.fetch(fetchFoodRequest)
+            let tables = try context.fetch(fetchTableRequest)
             
-            if foods.count > 0 {
-                for food in foods as! [NSManagedObject]{
+            if tables.count > 0 {
+                for table in tables as! [NSManagedObject]{
                     
-                    if let foodName = food.value(forKey: "foodName") as? String {
-                        self.foodNameArray.append(foodName)
+                    if let tableName = table.value(forKey: "tableName") as? String {
+                        self.tableNameArray.append(tableName)
                     }
                     
-                    
-                    if let foodId = food.value(forKey: "foodId") as? UUID {
-                        self.foodIdArray.append(foodId)
+                    if let tableId = table.value(forKey: "tableId") as? UUID {
+                        self.tableIdArray.append(tableId)
                     }
-                    self.foodListView.reloadData()
+                    self.tableListView.reloadData()
                 }
             }
         } catch {
-            print("error get food list")
+            print("error get table list")
         }
         
         
     }
     
     @objc func addButtonClicked() {
-        selectedFood = ""
-        performSegue(withIdentifier: "toAddFood", sender: nil)
+        selectedTable = ""
+        performSegue(withIdentifier: "toAddTable", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return foodNameArray.count
+        return tableNameArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = foodNameArray[indexPath.row]
+        cell.textLabel?.text = tableNameArray[indexPath.row]
         return cell
     }
     
@@ -96,10 +97,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         for segue: UIStoryboardSegue,
         sender: Any?
     ) {
-        if segue.identifier == "toAddFood" {
-            let destinationVC = segue.destination as! AddFoodViewController
-            destinationVC.choosenFood = selectedFood
-            destinationVC.choosenFoodId = selectedFoodId
+        if segue.identifier == "toTakeOrder" {
+            let destinationVC = segue.destination as! TakeOrderViewController
+            destinationVC.choosenTable = selectedTable
+            destinationVC.choosenTableId = selectedTableId
         }
     }
     
@@ -107,9 +108,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        selectedFood = foodNameArray[indexPath.row]
-        selectedFoodId = foodIdArray[indexPath.row]
-        performSegue(withIdentifier: "toAddFood", sender: nil)
+        selectedTable = tableNameArray[indexPath.row]
+        selectedTableId = tableIdArray[indexPath.row]
+        performSegue(withIdentifier: "toTakeOrder", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -117,26 +118,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext
             
-            let foodFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Food")
+            let tableFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Table")
             
-            let foodIdString = foodIdArray[indexPath.row].uuidString
+            let tableIdString = tableIdArray[indexPath.row].uuidString
             
-            foodFetchRequest.predicate = NSPredicate(
-                format: "foodId= %@ ",
-                foodIdString
+            tableFetchRequest.predicate = NSPredicate(
+                format: "tableId= %@ ",
+                tableIdString
             )
             
-            foodFetchRequest.returnsObjectsAsFaults = false
+            tableFetchRequest.returnsObjectsAsFaults = false
             do {
-                let foods = try context.fetch(foodFetchRequest)
-                if foods.count > 0 {
-                    for food in foods as! [NSManagedObject]{
-                        if let foodId = food.value(forKey: "foodId") as? UUID {
-                            if foodId == foodIdArray[indexPath.row] {
-                                context.delete(food)
-                                foodNameArray.remove(at: indexPath.row)
-                                foodIdArray.remove(at: indexPath.row)
-                                self.foodListView.reloadData()
+                let tables = try context.fetch(tableFetchRequest)
+                if tables.count > 0 {
+                    for table in tables as! [NSManagedObject]{
+                        if let tableId = table.value(forKey: "tableId") as? UUID {
+                            if tableId == tableIdArray[indexPath.row] {
+                                context.delete(table)
+                                tableNameArray.remove(at: indexPath.row)
+                                tableIdArray.remove(at: indexPath.row)
+                                self.tableListView.reloadData()
                         
                                 do {
                                     try context.save()
@@ -151,7 +152,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 
             }catch {
-                print("error in delete food")
+                print("error in delete table")
             }
             
         }

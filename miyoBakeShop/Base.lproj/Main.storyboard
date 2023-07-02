@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fpD-O6-DXg">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2gF-BU-ubp">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -24,17 +24,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fpD-O6-DXg" secondAttribute="bottom" id="8zV-mG-D9y"/>
-                            <constraint firstItem="fpD-O6-DXg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WIx-7a-E03"/>
-                            <constraint firstItem="fpD-O6-DXg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="igf-lZ-3FI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fpD-O6-DXg" secondAttribute="trailing" id="w3n-WC-67l"/>
+                            <constraint firstItem="2gF-BU-ubp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Fgk-ZN-rVM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2gF-BU-ubp" secondAttribute="bottom" id="LfH-8P-Re8"/>
+                            <constraint firstItem="2gF-BU-ubp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NV5-sm-Wme"/>
+                            <constraint firstItem="2gF-BU-ubp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UdV-ug-Edr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2gF-BU-ubp" secondAttribute="trailing" id="p3L-E4-ZWn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O4B-vS-zLd"/>
                     <connections>
-                        <outlet property="foodListView" destination="fpD-O6-DXg" id="cGb-4B-zmD"/>
-                        <segue destination="jHE-BR-88L" kind="show" identifier="toAddFood" id="KZa-Xr-Jln"/>
-                        <segue destination="HpX-so-cco" kind="show" identifier="toAddBeverage" id="2Ph-Nw-qWp"/>
+                        <outlet property="tableListView" destination="2gF-BU-ubp" id="eDc-VH-Tke"/>
                         <segue destination="OOe-oC-shO" kind="show" identifier="toTakeOrder" id="yqC-di-gkB"/>
                         <segue destination="7h5-Bo-d4Y" kind="show" identifier="toAddTable" id="ozu-cd-aEV"/>
                     </connections>
@@ -105,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2P-mX-NTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="354"/>
+            <point key="canvasLocation" x="3465" y="-1042"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WRo-GS-ClS">
@@ -132,14 +131,54 @@
                     <view key="view" contentMode="scaleToFill" id="las-cE-7zV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VZj-qx-skr">
+                                <rect key="frame" x="0.0" y="103" width="393" height="32"/>
+                                <segments>
+                                    <segment title="foods"/>
+                                    <segment title="beverages"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KBm-mT-89e">
+                                <rect key="frame" x="0.0" y="142" width="393" height="647"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hMh-3Q-5r8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VZj-qx-skr" secondAttribute="trailing" id="82L-XT-saS"/>
+                            <constraint firstItem="VZj-qx-skr" firstAttribute="trailing" secondItem="KBm-mT-89e" secondAttribute="trailing" id="Cfc-lY-X6X"/>
+                            <constraint firstItem="VZj-qx-skr" firstAttribute="leading" secondItem="KBm-mT-89e" secondAttribute="leading" id="EiK-0G-rOC"/>
+                            <constraint firstItem="KBm-mT-89e" firstAttribute="top" secondItem="VZj-qx-skr" secondAttribute="bottom" constant="8" symbolic="YES" id="Qcj-De-exl"/>
+                            <constraint firstItem="VZj-qx-skr" firstAttribute="top" secondItem="hMh-3Q-5r8" secondAttribute="top" id="Qx7-xi-A8l"/>
+                            <constraint firstItem="VZj-qx-skr" firstAttribute="leading" secondItem="las-cE-7zV" secondAttribute="leading" id="V4C-M4-nRR"/>
+                            <constraint firstItem="hMh-3Q-5r8" firstAttribute="bottom" secondItem="KBm-mT-89e" secondAttribute="bottom" constant="29" id="ePl-2G-hNq"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ULL-59-2wg"/>
+                    <navigationItem key="navigationItem" id="ULL-59-2wg">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="x0m-3I-8JZ">
+                            <rect key="frame" x="50" y="5" width="300" height="34.333333333333336"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="add food&amp;beverage"/>
+                            <connections>
+                                <action selector="toDirectAddingFoodOrBeverage:" destination="OOe-oC-shO" eventType="touchUpInside" id="UrJ-4R-392"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addFoodOrBeverage" destination="x0m-3I-8JZ" id="wcI-vD-PnX"/>
+                        <outlet property="foodAndBeverageTableView" destination="KBm-mT-89e" id="5Hm-E2-uS2"/>
+                        <outlet property="foodAndBeveragesSegmentController" destination="VZj-qx-skr" id="BII-2o-7DO"/>
+                        <segue destination="jHE-BR-88L" kind="show" identifier="toAddFood" id="RNj-dd-EvY"/>
+                        <segue destination="HpX-so-cco" kind="show" identifier="toAddBeverage" id="JA6-PQ-65S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKa-eB-XLf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="-1041"/>
+            <point key="canvasLocation" x="2290.8396946564885" y="-663.38028169014092"/>
         </scene>
         <!--Add Table View Controller-->
         <scene sceneID="qKV-H7-EXo">
@@ -149,13 +188,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="table name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-TK-gZF">
-                                <rect key="frame" x="67" y="165" width="258" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="table name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-TK-gZF">
+                                <rect key="frame" x="30" y="156" width="333" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF6-a9-UdV">
-                                <rect key="frame" x="145" y="242" width="102" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF6-a9-UdV">
+                                <rect key="frame" x="145" y="228" width="103" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="save table"/>
                                 <connections>
@@ -166,12 +205,12 @@
                         <viewLayoutGuide key="safeArea" id="i40-Ny-rRk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2zd-TK-gZF" firstAttribute="centerX" secondItem="TzC-7c-el6" secondAttribute="centerX" id="Ndm-ah-v4m"/>
-                            <constraint firstItem="2zd-TK-gZF" firstAttribute="top" secondItem="i40-Ny-rRk" secondAttribute="top" constant="62" id="QEv-oL-ZiE"/>
-                            <constraint firstItem="GF6-a9-UdV" firstAttribute="leading" secondItem="i40-Ny-rRk" secondAttribute="leading" constant="145" id="XYX-U6-jnN"/>
-                            <constraint firstItem="2zd-TK-gZF" firstAttribute="leading" secondItem="i40-Ny-rRk" secondAttribute="leading" constant="67" id="ada-Y2-d9K"/>
-                            <constraint firstItem="GF6-a9-UdV" firstAttribute="top" secondItem="2zd-TK-gZF" secondAttribute="bottom" constant="43" id="hJx-d1-aax"/>
-                            <constraint firstItem="2zd-TK-gZF" firstAttribute="centerX" secondItem="GF6-a9-UdV" secondAttribute="centerX" id="s40-hv-Ibi"/>
+                            <constraint firstItem="GF6-a9-UdV" firstAttribute="top" secondItem="2zd-TK-gZF" secondAttribute="bottom" constant="38" id="0Am-Ra-W8t"/>
+                            <constraint firstItem="GF6-a9-UdV" firstAttribute="leading" secondItem="i40-Ny-rRk" secondAttribute="leading" constant="145" id="FuW-dS-CK8"/>
+                            <constraint firstItem="2zd-TK-gZF" firstAttribute="leading" secondItem="i40-Ny-rRk" secondAttribute="leading" constant="30" id="HJi-9v-1Jv"/>
+                            <constraint firstItem="2zd-TK-gZF" firstAttribute="top" secondItem="i40-Ny-rRk" secondAttribute="top" constant="53" id="dPL-N2-YJI"/>
+                            <constraint firstItem="2zd-TK-gZF" firstAttribute="centerX" secondItem="GF6-a9-UdV" secondAttribute="centerX" id="jJF-CV-n8k"/>
+                            <constraint firstItem="2zd-TK-gZF" firstAttribute="centerX" secondItem="TzC-7c-el6" secondAttribute="centerX" id="nUb-uv-F4T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1dP-P7-jsq"/>
@@ -182,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBJ-TG-3Wa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887.7862595419847" y="-1744.3661971830986"/>
+            <point key="canvasLocation" x="2291" y="-1371"/>
         </scene>
         <!--Add Beverage View Controller-->
         <scene sceneID="wDH-jd-tOW">
@@ -192,7 +231,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="khE-zr-GPj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miyo.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="khE-zr-GPj">
                                 <rect key="frame" x="38" y="127" width="317" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="NgI-bi-cHn"/>
@@ -207,6 +246,9 @@
                                 <rect key="frame" x="132" y="475" width="129" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="add beverage"/>
+                                <connections>
+                                    <action selector="addBeverage:" destination="HpX-so-cco" eventType="touchUpInside" id="94L-UZ-aog"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="beverage price (TL)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mRP-t9-p2P">
                                 <rect key="frame" x="38" y="402" width="317" height="34"/>
@@ -231,10 +273,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3yy-Ut-FWb"/>
+                    <connections>
+                        <outlet property="addBeverageButton" destination="Qjh-Lg-XSe" id="iVu-wd-Oxm"/>
+                        <outlet property="beverageImageView" destination="khE-zr-GPj" id="JZd-UR-QYr"/>
+                        <outlet property="beverageNameTextField" destination="m4E-gt-iyD" id="vtD-Ef-Uih"/>
+                        <outlet property="beveragePriceTextField" destination="mRP-t9-p2P" id="hPt-7o-jvG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilq-Ct-mlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887.7862595419847" y="-312.67605633802816"/>
+            <point key="canvasLocation" x="3465" y="-294"/>
         </scene>
     </scenes>
     <resources>
