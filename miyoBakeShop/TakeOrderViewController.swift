@@ -227,5 +227,100 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
   
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            
+            if(selectedItem == "foods") {
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context = appDelegate.persistentContainer.viewContext
+                
+                let foodFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Food")
+                
+                let foodIdString = foodIdArray[indexPath.row].uuidString
+                
+                foodFetchRequest.predicate = NSPredicate(
+                    format: "foodId= %@ ",
+                    foodIdString
+                )
+                
+                foodFetchRequest.returnsObjectsAsFaults = false
+                
+                do {
+                    let foods = try context.fetch(foodFetchRequest)
+                    if foods.count > 0 {
+                        for food in foods as! [NSManagedObject]{
+                            if let foodId = food.value(forKey: "foodId") as? UUID {
+                                if foodId == foodIdArray[indexPath.row] {
+                                    context.delete(food)
+                                    foodNameArray.remove(at: indexPath.row)
+                                    foodIdArray.remove(at: indexPath.row)
+                                    self.foodAndBeverageTableView.reloadData()
+                            
+                                    do {
+                                        try context.save()
+                                    } catch {
+                                        print("error delete and reload")
+                                    }
+                                    
+                                    break
+                                }
+                            }
+                        }
+                    }
+                    
+                }catch {
+                    print("error in delete food")
+                }
+                
+            } else {
+                
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context = appDelegate.persistentContainer.viewContext
+                
+                let beverageFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Beverage")
+                
+                let beverageIdString = beverageIdArray[indexPath.row].uuidString
+                
+                beverageFetchRequest.predicate = NSPredicate(
+                    format: "beverageId= %@ ",
+                    beverageIdString
+                )
+                
+                beverageFetchRequest.returnsObjectsAsFaults = false
+                
+                do {
+                    let beverages = try context.fetch(beverageFetchRequest)
+                    if beverages.count > 0 {
+                        for beverage in beverages as! [NSManagedObject]{
+                            if let beverageId = beverage.value(forKey: "beverageId") as? UUID {
+                                if beverageId == beverageIdArray[indexPath.row] {
+                                    context.delete(beverage)
+                                    beverageNameArray.remove(at: indexPath.row)
+                                    beverageIdArray.remove(at: indexPath.row)
+                                    self.foodAndBeverageTableView.reloadData()
+                            
+                                    do {
+                                        try context.save()
+                                    } catch {
+                                        print("error delete and reload")
+                                    }
+                                    
+                                    break
+                                }
+                            }
+                        }
+                    }
+                    
+                }catch {
+                    print("error in delete beverage")
+                }
+                
+                
+            }
+            
+        }
+    }
+        
 
 }
