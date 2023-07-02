@@ -49,6 +49,14 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
         getFoodList()
         getBeverageList()
         
+        let nib = UINib.init(nibName: "FoodAndBeverageTableViewCell", bundle: nil)
+        
+        foodAndBeverageTableView.register(
+            nib,
+            forCellReuseIdentifier: "foodOrBeverageCell"
+        )
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -186,32 +194,37 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        
+        
+        let cell = foodAndBeverageTableView.dequeueReusableCell(
+            withIdentifier: "foodOrBeverageCell",
+            for: indexPath
+        ) as? FoodAndBeverageTableViewCell
+        
+ 
         if(selectedItem == "foods") {
-            if let foodImage = foodPhotoArray[indexPath.row] as? Data {
-                let foodImage = UIImage(data: foodImage)
-                cell.imageView?.image = foodImage
-            }
             
-            cell.textLabel?.text = foodNameArray[indexPath.row]
+            cell?.cellInit(
+                name: foodNameArray[indexPath.row],
+                price: foodPriceArray[indexPath.row],
+                amount: 0,
+                photo: foodPhotoArray[indexPath.row]
+            )
             
-            let foodPrice = String(foodPriceArray[indexPath.row])
-            cell.textLabel?.text = foodPrice
             
         } else {
             
-            if let beverageImage = beveragePhotoArray[indexPath.row] as? Data {
-                let beverageImage = UIImage(data: beverageImage)
-                cell.imageView?.image = beverageImage
-            }
+            cell?.cellInit(
+                name: beverageNameArray[indexPath.row],
+                price: beveragePriceArray[indexPath.row],
+                amount: 0,
+                photo: beveragePhotoArray[indexPath.row]
+            )
             
-            cell.textLabel?.text = beverageNameArray[indexPath.row]
-            
-            let beveragePrice = String(beveragePriceArray[indexPath.row])
-            cell.textLabel?.text = beveragePrice
         }
+        
+        return cell!
   
-        return cell
     }
     
 
