@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57D1EBA2A519F4D002A66D6 /* FoodAndBeverageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D1EB82A519F4D002A66D6 /* FoodAndBeverageTableViewCell.swift */; };
+		B57D1EBB2A519F4D002A66D6 /* FoodAndBeverageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57D1EB92A519F4D002A66D6 /* FoodAndBeverageTableViewCell.xib */; };
 		B59E294E2A501A6500109FAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E294D2A501A6500109FAF /* AppDelegate.swift */; };
 		B59E29502A501A6500109FAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E294F2A501A6500109FAF /* SceneDelegate.swift */; };
 		B59E29522A501A6500109FAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59E29512A501A6500109FAF /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B57D1EB82A519F4D002A66D6 /* FoodAndBeverageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAndBeverageTableViewCell.swift; sourceTree = "<group>"; };
+		B57D1EB92A519F4D002A66D6 /* FoodAndBeverageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodAndBeverageTableViewCell.xib; sourceTree = "<group>"; };
 		B59E294A2A501A6500109FAF /* miyoBakeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miyoBakeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59E294D2A501A6500109FAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B59E294F2A501A6500109FAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,8 @@
 				B59E29862A506E6D00109FAF /* AddBeverageViewController.swift */,
 				B59E29882A50769A00109FAF /* AddTableViewController.swift */,
 				B59E29562A501A6500109FAF /* miyoBakeShop.xcdatamodeld */,
+				B57D1EB82A519F4D002A66D6 /* FoodAndBeverageTableViewCell.swift */,
+				B57D1EB92A519F4D002A66D6 /* FoodAndBeverageTableViewCell.xib */,
 			);
 			path = miyoBakeShop;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57D1EBB2A519F4D002A66D6 /* FoodAndBeverageTableViewCell.xib in Resources */,
 				B59E295D2A501A6600109FAF /* LaunchScreen.storyboard in Resources */,
 				B59E295A2A501A6600109FAF /* Assets.xcassets in Resources */,
 				B59E29552A501A6500109FAF /* Main.storyboard in Resources */,
@@ -277,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57D1EBA2A519F4D002A66D6 /* FoodAndBeverageTableViewCell.swift in Sources */,
 				B59E29582A501A6500109FAF /* miyoBakeShop.xcdatamodeld in Sources */,
 				B59E29812A50370000109FAF /* TakeOrderViewController.swift in Sources */,
 				B59E29872A506E6D00109FAF /* AddBeverageViewController.swift in Sources */,
