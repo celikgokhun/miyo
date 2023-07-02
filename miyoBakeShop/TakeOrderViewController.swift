@@ -53,7 +53,19 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewWillAppear(_ animated: Bool) {
         
-        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(getFoodList),
+            name: NSNotification.Name(rawValue: "newData"),
+            object: nil
+        )
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(getBeverageList),
+            name: NSNotification.Name(rawValue: "newData"),
+            object: nil
+        )
     }
     
     @objc func getFoodList(){
@@ -160,22 +172,6 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
         } else {
             performSegue(withIdentifier: "toAddBeverage", sender: nil)
         }
-        
-        if selectedItem == "foods" {
-            NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(getFoodList),
-                name: NSNotification.Name(rawValue: "newData"),
-                object: nil
-            )
-        } else {
-            NotificationCenter.default.addObserver(
-                self,
-                selector: #selector(getBeverageList),
-                name: NSNotification.Name(rawValue: "newData"),
-                object: nil
-            )
-        }
             
     }
     
@@ -192,9 +188,6 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         if(selectedItem == "foods") {
-            
-            print(foodNameArray[indexPath.row])
-            
             if let foodImage = foodPhotoArray[indexPath.row] as? Data {
                 let foodImage = UIImage(data: foodImage)
                 cell.imageView?.image = foodImage
