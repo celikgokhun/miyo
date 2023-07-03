@@ -15,6 +15,7 @@ class AddFoodViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var foodPriceTextField: UITextField!
     @IBOutlet weak var foodSaveButton: UIButton!
     
+    
     var choosenFood = ""
     var choosenFoodId: UUID?
     
