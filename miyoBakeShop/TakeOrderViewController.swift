@@ -193,11 +193,13 @@ class TakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowNumber: Int = foodIdArray.count
-        if(selectedItem == "foods") {
+        
+        if(foodIdArray.count <= beverageIdArray.count ) {
             rowNumber = foodIdArray.count
         } else {
             rowNumber = beverageIdArray.count
         }
+        
         return rowNumber
     }
     
